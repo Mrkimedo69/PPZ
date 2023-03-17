@@ -1,0 +1,42 @@
+#matrix(1:12, nrow= 3, byrow = T)
+
+#r1<-c(1,2,3)
+#r2<-c(4,5,6)
+#r3<-c(7,8,9)
+#matrica <-matrix(c(r1,r2,r3), ncol=3)
+#matrica
+
+pon <- c(6,15,19)
+uto <- c(0,6,7)
+sri <- c(-1,4,4)
+cet <- c(-1,2,1)
+
+matrica <- matrix(c(pon,uto,sri,cet),nrow=4, byrow = T)
+matrica
+ime_r<-c('pon','uto','sri','cet')
+ime_s<-c('jutro','podne','vecer')
+colnames(matrica)<-ime_s
+rownames(matrica)<-ime_r
+matrica
+pet<-c(4,12,18)
+matrica=rbind(matrica,pet)
+sub<-c(2,4,6)
+matrica=rbind(matrica,sub)
+ned<-c(1,2,3)
+matrica=rbind(matrica,ned)
+noc<-c(0)
+matrica =cbind(matrica,noc)
+matrica
+matrica[,'podne']
+mean(matrica[,'jutro'])
+pro_temp <- c(mean(matrica[,'jutro']),mean(matrica[,'podne']),mean(matrica[,'vecer']),mean(matrica[,'noc']))
+options(digits=2)
+matrica = rbind(matrica,pro_temp)
+matrica
+matrica[c(3,6:7),]
+matrica[c('sub','ned'),]
+#parni_mat <- matrix(seq(2,18,2),nrow=3,byrow = T)
+#parni_mat
+#cat("Suma redaka je: ",rowSums(parni_mat))
+#cat("Suma stupaca je: ",colSums(parni_mat))
+
