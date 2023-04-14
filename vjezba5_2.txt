@@ -1,0 +1,64 @@
+bodovi <-80
+if(bodovi > 90){
+  print("A")
+}else if (bodovi >80){
+  print("B")
+}else if (bodovi >70){
+  print("C")
+}else if (bodovi >60){
+  print("D")
+}else if (bodovi >=50){
+  print("E")
+}else{
+  pint("F")
+}
+
+broj <-5 
+if(broj%%2==0){
+  print("Paran je broj")
+}else{
+  print("Broj je neprana")
+}
+
+ifelse(broj%%2==0, "Broj je paran", "Broj je neparan")  
+
+broj1 <- 1
+repeat{
+  print(broj1)
+  broj1 = broj1 + 1
+  if(broj1>10){
+    break
+  }
+}
+
+br <-readline(prompt = "Unesite broj: ")
+factorial(as.numeric(br))
+br = as.numeric(br)
+f <- 1
+repeat{
+  f = f * br
+  br = br-1
+  if(br==1){
+    break
+  } 
+}
+f
+
+sum <-0
+for(i in 1:20){
+  if(i%%2==0){
+    sum = sum +(i*i)
+  }
+}
+sum
+
+
+brojac <-0
+br <- 0
+while(brojac <10){
+  br = br + 1
+  if(br == 1 || br%%2!=0){
+    print(br)
+    brojac = brojac + 1
+  }
+}

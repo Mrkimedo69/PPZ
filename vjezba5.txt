@@ -1,0 +1,9 @@
+mjerenje <- list('pon',11,TRUE)
+mjerenje
+mjerenje[[2]]
+names(mjerenje) = c('tjedan','potrosnja','suncano')
+mjerenje <- list(tjedan="pon",potrosnja=11,suncano = TRUE)
+mjerenje$tjedan
+mjerenje[[4]]<-0
+names(mjerenje) = c ("tjedan","potrosnja","suncano","padaline")
+mjerenje$padaline<-5
