@@ -1,0 +1,33 @@
+spol_v <- c('musko','zensko', 'zensko', 'zensko', 'musko')
+spol_v
+spol_f <- factor(spol_v)
+spol_f
+temp_v <- c('visoka', 'visoka', 'srednja', 'niska', 'visoka')
+temp_f = factor(temp_v, order=T, levels=c('niska', 'srednja', 'visoka'))
+temp_f
+temp_f[3] > temp_f[4]
+summary(temp_f)
+
+pon_v <- c('visoka', 'niska', 'visoka')
+uto_v <- c('srednja', 'niska', 'visoka')
+leveli <- c('niska', 'srednja', 'visoka')
+pon_f <- factor(pon_v, order = T, levels = leveli)
+uto_f <- factor(uto_v, order = T, levels = leveli)
+pon_f > uto_f
+pon_f[pon_f>uto_f]
+
+x <- factor(c('lijevo', 'desno', 'desno', 'lijevo'), order = T, levels = c('lijevo','sredina', 'desno'))
+x[1]>x[2]
+length(levels(x))
+unique(x)
+
+red<- factor(c('cetiri', 'jedan', 'dva', 'cetiri','dva', 'dva'))
+red[1]= 'jedan'
+red[6] = 'tri'
+red
+
+
+brojevi = factor(c(7,1,5,2,4,12))
+as.numeric(brojevi)
+brojevi[1]+brojevi[2]
+
