@@ -1,0 +1,62 @@
+A <- c(2,8,14)
+B <- c(4,10,16)
+C <- c(6,12,18)
+
+matrica <- matrix(c(A,B,C),3)  
+matrica  
+colnames(matrica) <- c("A","B","C")
+rownames(matrica) <- c("I","II","III")
+matrica
+IV <- apply(matrica, 2, mean)
+matrica <- rbind(matrica,IV)
+D <- apply(matrica,1,sum)
+matrica <- cbind(matrica,D)
+matrica
+matrica <- apply(matrica,2,function(x)x+1)
+matrica
+
+
+
+ime <- c("Ana","Ivan","Marko","Petra")
+dob <- c(27,32,21,24)
+visina <- c(1.63,1.82,1.70,1.68)
+studenti <- data.frame(ime,dob,visina)
+lapply(studenti[,2:3],mean)
+lapply(studenti[,1],class)
+lapply(studenti, function(x) ifelse(typeof(x)=="character", print(" "),mean(x)))
+
+
+
+
+proizvodac <- c("Ford","Toyota","Chevrolet")
+model <-c("Mustang","Corolla","Camaro")
+godiste <- c(2010,2015,2012)
+cijena <- c(12000,15000,1800)
+auti <- data.frame(proizvodac,model,godiste,cijena)
+auti
+auti2<-lapply(auti,function(x)as.character(x))
+auti2
+auti3<-lapply(auti, function(x) if(is.character(x))toupper(x) else x)
+auti3
+
+
+
+imena <- c("Ana","Boris","Branko","Dario")
+dob <- c(24,32,45,19)
+spol <- c("ženski","muški","ženski","muški")
+ljudi <- data.frame(imena,dob,spol)
+ljudi
+godine <- sapply(ljudi$dob, function(x) x*2)
+godine
+godine2 <- lapply(ljudi$dob, function(x) x*2)
+godine2
+class(godine2)
+
+
+ime <- c("Ana","Ivan","Marko","Petra")
+dob <- c(27,24,21,24)
+visina <- c(1.63,1.82,1.70,1.68)
+spol <- c("ženski","muški","ženski","muški")
+studenti <- data.frame(ime,dob,visina,spol)
+studenti
+tapply(studenti$visina, studenti$spol, mean)
